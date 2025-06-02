@@ -18,7 +18,7 @@ const Dashboard = ({ onNavigate }) => {
         <div className="card">
           <div className='carddiv'> <img src={totalIcon} className="cardIcon" alt="CIcon" /> </div>
           <h3>Total Patients</h3>
-          <p>45 Patients</p>
+          <p></p>
           <button className="contentButton" onClick={() => onNavigate('patients')}>
             View
           </button>
@@ -27,7 +27,7 @@ const Dashboard = ({ onNavigate }) => {
         <div className="card">
           <div className='carddiv'> <img src={ogIcon} className="cardIcon" alt="oggIcon" /> </div>
           <h3>On-Going Patients</h3>
-          <p>8 Patients</p>
+          <p></p>
           <button className="contentButton" onClick={() => onNavigate('ongoing')}>
             View
           </button>
@@ -36,7 +36,7 @@ const Dashboard = ({ onNavigate }) => {
         <div className="card">
           <div className='carddiv'> <img src={sIcon} className="cardIcon" alt="ssIcon" /> </div>
           <h3>Supply Inventory</h3>
-          <p>Out of Stocks</p>
+          <p></p>
           <button className="contentButton" onClick={() => onNavigate('supply')}>
             View
           </button>
@@ -56,7 +56,7 @@ const Dashboard = ({ onNavigate }) => {
         <h3>Recent Activities</h3>
         <ul>
           <li>jaybee sucal added as a new patient</li>
-          <li>10 syringes and 20 condoms added to inventory</li>
+          <li>10 syringes and bp monitor added to inventory</li>
           <li>Report generated for June 2025</li>
         </ul>
       </div>

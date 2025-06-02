@@ -62,6 +62,24 @@ app.get('/api/patients', (req, res) => {
   });
 });
 
+app.delete('/api/patients/:id', (req, res) => {
+  const patientId = req.params.id;
+  db.query('DELETE FROM patients WHERE id = ?', [patientId], (err, result) => {
+    if (err) return res.status(500).json({ error: 'Delete failed' });
+    res.json({ message: 'Patient deleted' });
+  });
+});
+
+app.put('/api/patients/:id', (req, res) => {
+  const { id } = req.params;
+  const updatedData = req.body;
+  db.query('UPDATE patients SET ? WHERE id = ?', [updatedData, id], (err) => {
+    if (err) return res.status(500).json({ error: 'Update failed' });
+    res.json({ message: 'Patient updated' });
+  });
+});
+
+
 app.post('/api/supplies', (req, res) => {
   const { itemName, bName, supplyCode, type, purchaseDate, expiration } = req.body;
 
