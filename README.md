@@ -26,3 +26,7 @@ node server.js
 cd CLINIC-FRONTEND
 npm install
 npm start
+
+then login
+```email : admin@citycollegeoftagaytay.edu.ph```
+```password : 1234```
