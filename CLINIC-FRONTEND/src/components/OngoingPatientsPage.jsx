@@ -3,7 +3,7 @@ import './Main.css';
 import searchIcon from "../assets/magnifying-glass.png";
 const placeholderPatients = Array.from({ length: 30 }, (_, index) => ({
   id: index + 1,
-  name: "Markluigi Tite Rodelas"
+  name: "Markluigi Rodelas"
 }));
 
 const OngoingPatientsPage = () => {

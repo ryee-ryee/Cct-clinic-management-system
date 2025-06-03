@@ -111,6 +111,37 @@ app.get('/api/supplies', (req, res) => {
   });
 });
 
+app.delete('/api/supplies/:id', (req, res) => {
+  const supplyId = req.params.id;
+  const sql = 'DELETE FROM supplies WHERE id = ?';
+
+  db.query(sql, [supplyId], (err, result) => {
+    if (err) {
+      console.error('Delete error:', err);
+      return res.status(500).json({ message: 'Error deleting supply' });
+    }
+    res.json({ message: 'Supply deleted successfully' });
+  });
+});
+
+app.put('/api/supplies/:id', (req, res) => {
+  const supplyId = req.params.id;
+  const { itemName, bName, supplyCode, type, purchaseDate, expiration } = req.body;
+
+  const sql = `UPDATE supplies SET 
+    itemName = ?, bName = ?, supplyCode = ?, type = ?, purchaseDate = ?, expiration = ?
+    WHERE id = ?`;
+
+  db.query(sql, [itemName, bName, supplyCode, type, purchaseDate, expiration, supplyId], (err, result) => {
+    if (err) {
+      console.error('Update error:', err);
+      return res.status(500).json({ message: 'Error updating supply' });
+    }
+    res.json({ message: 'Supply updated successfully' });
+  });
+});
+
+
 
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);

@@ -252,6 +252,8 @@ body, html {
   padding: 8px 45px 8px 45px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  box-shadow: 0 4px 4px rgba(0,0,0,0.5);
+  border-style: none;
 }
 
 .contentButton:hover {
@@ -510,6 +512,11 @@ textarea {
   border-radius: 8px;
   cursor: pointer;
   font-weight: bold;
+  box-shadow: 0 4px 4px rgba(0,0,0,0.5);
+}
+
+.info-button:hover {
+  background-color: #a64949;
 }
 
 
@@ -625,7 +632,6 @@ textarea {
 
 }
 
-/* Overlay background */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -659,6 +665,11 @@ textarea {
   padding: 5px;
   border-radius: 5px;
   cursor: pointer;
+  border-style: none;
+}
+
+.modal button:hover {
+ background-color: #7fdaad; 
 }
 
 @keyframes fadeIn {
@@ -667,14 +678,41 @@ textarea {
 }
 
 .table-buttons {
-  padding: 5px 10px 5px 10px;
+  padding: 10px 15px 10px 15px;
   margin: 5px;
   background-color: rgb(3, 175, 0);
   cursor: pointer;
   transition: background-color 0.3s ease;
   border-radius: 5px;
+  border-style: none;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
 .table-buttons:hover {
   background-color: #7fdaad;
+}
+
+
+.modal-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.delete-button {
+  background-color: #ff4d4f;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
 }
