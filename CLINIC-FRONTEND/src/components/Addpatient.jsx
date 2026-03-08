@@ -172,7 +172,7 @@ const AddPatientForm = () => {
           </div>
 
           <div>
-            <label>No. of Clinic Visit</label>
+            <label>Number of Clinic Visits</label>
             <input name="visits" type="number" value={formData.visits} onChange={handleChange} />
           </div>
 
