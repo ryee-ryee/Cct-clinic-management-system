@@ -60,10 +60,6 @@ const AddPatientForm = () => {
     });
   };
 
- /* const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Submitted:', formData);
-  };*/
   const handleSubmit = async (e) => {
   e.preventDefault();
 
